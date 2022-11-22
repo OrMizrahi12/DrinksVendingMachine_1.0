@@ -69,13 +69,12 @@ namespace DrinksVendingMachine_1._0
                 return; 
             }
             _ = new List<string>();
-            int module =0;
             int result = ChooseDrinkValidation();
 
             for (int i = 0; i < beverages.Count; i++)
                 if (result == i && beverages[i].CheckStockAvailability())
                 {
-                    module= CashRegister.CashRegisterController(beverages[i]);
+                    int module = CashRegister.CashRegisterController(beverages[i]);
                     List<string> Ingredients = beverages[i].SpecificIngredients();
                     beverages[i].Preper(Ingredients);
                     Console.WriteLine($"Module: {module}");
