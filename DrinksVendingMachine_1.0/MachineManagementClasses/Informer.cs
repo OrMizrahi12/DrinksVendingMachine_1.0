@@ -10,21 +10,22 @@ namespace DrinksVendingMachine_1._0
     {
         static public void GetBeverageName(string beverageName)
         {
-            Console.WriteLine($"**********\nPreper Your {beverageName}\n**********\n\n\n");
+            Console.WriteLine($"Preper Your {beverageName}...\n\n");
         }
         static public void GetWatarTemp(int watarTemp)
         {
-            Console.WriteLine($"Adding hot watar, temp of {watarTemp}");
+            Console.WriteLine($"**********\nAdding hot watar, temp of {watarTemp}\n**********");
         }
         static public void GetIngredients(List<string> Ingredients)
         {
-            Console.WriteLine("Add Ingredients:");
+            Console.WriteLine("**********\nAdd Ingredients");
             foreach (var ingredient in Ingredients)
                 Console.WriteLine("- " + ingredient);
+            Console.WriteLine("**********");
         }
         static public void StirringBeverage(string beverageName)
         {
-            Console.WriteLine($"Stirring All....\nyour {beverageName} is ready!");
+            Console.WriteLine($"**********\nStirring All....\nyour {beverageName} is ready!\n***********\n\n");
         }
     }
 }

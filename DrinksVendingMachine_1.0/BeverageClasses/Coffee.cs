@@ -71,9 +71,9 @@ namespace DrinksVendingMachine_1._0
             Console.WriteLine("How much suggar?");
             while (true)
             {
-                if(int.TryParse(Console.ReadLine(), out int result) && result >= 0 && result < 5)
+                if(int.TryParse(Console.ReadLine(), out int result) && result >= 0 && result <= 5)
                 {
-                    if ((Stock.Suggar - result) > 1)
+                    if ((Stock.Suggar - result) >= 0)
                     {
                         Stock.Suggar -= result;
                         return result;
@@ -86,6 +86,7 @@ namespace DrinksVendingMachine_1._0
 
         public override bool CheckStockAvailability()
         {
+            return true;
             if (Stock.CoffeeDishes == 0)
             {
                 Console.WriteLine("The coffee is out of stock");

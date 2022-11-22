@@ -49,7 +49,8 @@ namespace DrinksVendingMachine_1._0
                 default:
                     break;
             }
-            Console.WriteLine("Success added.");
+            Console.Clear();
+            Console.WriteLine("Success added!\n Look on your stock now --> \n\n");
             ShowStock();
         }
 
@@ -66,7 +67,7 @@ namespace DrinksVendingMachine_1._0
 
         static public void ShowStock()
         {
-            Console.WriteLine($"1. Cups: {_cups}\n2. Suggar: {_suggar}\n3. CoffeeDishes: {_coffeeDishes}\n4. TeaDishes:{_teaDishes}");
+            Console.WriteLine($"1. Cups: {_cups}\n2. Suggar: {_suggar}\n3. CoffeeDishes: {_coffeeDishes}\n4. TeaDishes:{_teaDishes}\n\n\n");
         }
         static private int ChooseProductNum()
         {
