@@ -64,7 +64,6 @@ namespace DrinksVendingMachine_1._0
             
         }
 
-
         static public void ShowStock()
         {
             Console.WriteLine($"1. Cups: {_cups}\n2. Suggar: {_suggar}\n3. CoffeeDishes: {_coffeeDishes}\n4. TeaDishes:{_teaDishes}");
