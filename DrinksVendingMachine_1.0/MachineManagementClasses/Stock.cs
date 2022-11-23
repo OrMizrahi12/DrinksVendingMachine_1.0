@@ -8,12 +8,12 @@ namespace DrinksVendingMachine_1._0
 {
     internal class Stock
     {
-        static private int _cups = 5;
-        static private int _suggar = 5;
-        static private int _cupOfMilk = 3;
-        static private int _coffeeDishes = 5;
-        static private int _cinnamon = 5;
-        static private int _teaDishes = 5;
+        static private int _cups = 100;
+        static private int _suggar = 100;
+        static private int _cupOfMilk = 100;
+        static private int _coffeeDishes = 100;
+        static private int _cinnamon = 100;
+        static private int _teaDishes = 100;
         private const int TYPE_OF_STOCKS = 4;
 
         static public int Cups { get { return _cups; } set { _cups = value; } }
@@ -62,7 +62,6 @@ namespace DrinksVendingMachine_1._0
                 if (int.TryParse(Console.ReadLine(), out int result) && result > 0 && result < 100)
                     return result;
                 else Console.WriteLine("only 1 - 100");
-            
         }
 
         static public void ShowStock()

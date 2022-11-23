@@ -20,12 +20,10 @@ namespace DrinksVendingMachine_1._0
                 Navigation();
             }
         }
-
         public void AddBeverage(Beverage beverage)
         {
             beverages.Add(beverage);
         }
-
         public void ShowBeverage()
         {
             Console.WriteLine("Choose your best:");
@@ -77,7 +75,7 @@ namespace DrinksVendingMachine_1._0
                     int module = CashRegister.CashRegisterController(beverages[i]);
                     List<string> Ingredients = beverages[i].SpecificIngredients();
                     beverages[i].Preper(Ingredients);
-                    Console.WriteLine($"Your module is {module}$");
+                    Console.WriteLine($"-->Your module is {module}$\n");
                 }
                 return; 
         }

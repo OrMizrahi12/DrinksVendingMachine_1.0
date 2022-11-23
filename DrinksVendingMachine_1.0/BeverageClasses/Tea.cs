@@ -75,16 +75,16 @@ namespace DrinksVendingMachine_1._0
             Console.WriteLine("How much suggar?");
             while (true)
             {
-                if (int.TryParse(Console.ReadLine(), out int result) && result >= 0 && result < 5)
+                if (int.TryParse(Console.ReadLine(), out int result) && result >= 0 && result <= 3)
                 {
-                    if ((Stock.Suggar - result) > 1)
+                    if ((Stock.Suggar - result) >= 1)
                     {
                         Stock.Suggar -= result;
                         return result;
                     }
-                    else Console.WriteLine($"The count is {Stock.Suggar}. You cant get {Stock.Suggar} suggar.");
+                    else Console.WriteLine($"The suggar out of stock.");
                 }
-                else Console.WriteLine("0-5");
+                else Console.WriteLine("0-3 only");
             }
         }
 
