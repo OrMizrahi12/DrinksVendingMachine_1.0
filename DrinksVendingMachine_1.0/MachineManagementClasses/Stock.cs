@@ -59,9 +59,9 @@ namespace DrinksVendingMachine_1._0
 
             Console.WriteLine($"What the count of {productName} you want to add?");
             while (true)
-                if (int.TryParse(Console.ReadLine(), out int result) && result > 0 && result < int.MaxValue)
+                if (int.TryParse(Console.ReadLine(), out int result) && result > 0 && result < 100)
                     return result;
-                else Console.WriteLine("A");
+                else Console.WriteLine("only 1 - 100");
             
         }
 
@@ -75,7 +75,7 @@ namespace DrinksVendingMachine_1._0
             while (true)
                 if (int.TryParse(Console.ReadLine(), out int result) && result > 0 && result <= TYPE_OF_STOCKS)
                     return result;
-                else Console.WriteLine("A");
+                else Console.WriteLine("Choose valid option.");
             
         }
     }

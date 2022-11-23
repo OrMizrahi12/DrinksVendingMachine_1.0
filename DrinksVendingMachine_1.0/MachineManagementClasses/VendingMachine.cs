@@ -30,7 +30,7 @@ namespace DrinksVendingMachine_1._0
         {
             Console.WriteLine("Choose your best:");
             for (int i = 0; i < beverages.Count; i++)
-                Console.WriteLine($"{beverages[i].Name} - {beverages[i].Price}$\n------------- "); 
+                Console.WriteLine($"\n{i+1}. {beverages[i].Name} - {beverages[i].Price}$\n------------- "); 
         }
         void ShowMenu()
         {
@@ -77,7 +77,7 @@ namespace DrinksVendingMachine_1._0
                     int module = CashRegister.CashRegisterController(beverages[i]);
                     List<string> Ingredients = beverages[i].SpecificIngredients();
                     beverages[i].Preper(Ingredients);
-                    Console.WriteLine($"Module: {module}");
+                    Console.WriteLine($"Your module is {module}$");
                 }
                 return; 
         }
